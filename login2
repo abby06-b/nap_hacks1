@@ -1,0 +1,28 @@
+<body>
+<div class = "login-container">
+<h2>NAP LOGIN</h2>
+<form id="loginForm">
+<label for="aadhar">Aadhar:</label>
+<input type="text"id="aadhar"name="aadhar"placeholder="enter Aadhar number" required>
+<label for="password" id="password" name="password" placeholder="enter your password" required>
+<span class="toggle-password onclick="togglePassword()">Show password</span>
+<button type="submit"class="btn">Login</button>
+</form>
+</div>
+<script>
+function togglePassword()
+{
+var passwordInput=document.getElementById("password");
+if(passwordInput.type=="password")
+{
+passwordInput.type="text";
+}
+else
+{
+passwordInput.type="password";
+}
+}
+document.getElementById('loginForm').addEventListener('submit','function(event)
+{
+event.preventDefault();
+var aadhar = document.getElementbyId('aadhar').value;
